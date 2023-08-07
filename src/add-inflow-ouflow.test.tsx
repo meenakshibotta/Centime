@@ -1,17 +1,17 @@
 import React from 'react';
 import { cleanup, render, screen } from '@testing-library/react';
-import App from './App';
 import { Provider } from 'react-redux';
 import { State } from './store/state';
 
 import store from './store/store';
+import Inflow_outflow from './add-inflow-ouflow';
 
 describe("App", () => {
   function renderComponent(state: State) {
     return [
       render(
         <Provider store={store}>
-          <App />
+          <Inflow_outflow />
         </Provider>
       ),
       store
